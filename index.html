@@ -12,26 +12,26 @@
 <body>
     <main>
         <header>
-            <img src="./images/stickman1.svg" alt="Stickman #1">
-            <img src="./images/stickman2.svg" alt="Stickman #2">
+            <img src="./images/stickmen/stickman1.svg" alt="Stickman #1">
+            <img src="./images/stickmen/stickman2.svg" alt="Stickman #2">
             <h1><span class="font-pixel">Resol</span><span class="font-reg">ution</span></h1>
-            <img src="./images/stickman3.svg" alt="Stickman #3">
-            <img src="./images/stickman4.svg" alt="Stickman #4">
+            <img src="./images/stickmen/stickman3.svg" alt="Stickman #3">
+            <img src="./images/stickmen/stickman4.svg" alt="Stickman #4">
         </header>
 
         <section id="start-btn">
             <img src="/images/scroll.png" alt="Scroll Start Button">
         </section>
         <section id="credits-btn" class="ink-btn">
-            <h2 class="font-pixel ink-text">Credits</h2>
+            <h2 class="font-pixel ink-txt">Credits</h2>
         </section>
-        <section id="game-zone">
-            <section id="bottom-info">
+        <section id="game-overlay" class="overlay-forest hidden">
+            <section id="game-zone" class="bg-forest">
                 <section id="speaker" class="ribbon">
                     <h2>Speaker</h2>
                 </section>
-                <section id="content">
-                    <section id="story">
+                <section id="content" class="story">
+                    <section id="story" class="">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores mollitia dolorem
                             repellendus
                             molestiae alias quas, nulla beatae quaerat sint suscipit minus minima quam error assumenda,
@@ -50,15 +50,21 @@
                             ipsum
                             dolorum ea aliquam. Odit, totam.</p>
                         <section class="ink-btn">
-                            <h3 class="font-pixel ink-text">Next</h3>
+                            <h3 class="font-pixel ink-txt">Next</h3>
                         </section>
                     </section>
-                    <section class="option hidden">
+                    <section id="choices" class="hidden">
                         <h3>What will YOU do?</h3>
                         <section id="options">
-                            <section class="ink-btn">Option 1</section>
-                            <section class="ink-btn">Option 2</section>
-                            <section class="ink-btn">Option 3</section>
+                            <section class="ink-btn">
+                                <h3 class="ink-txt">Option 1</h3>
+                            </section>
+                            <section class="ink-btn">
+                                <h3 class="ink-txt">Option 2</h3>
+                            </section>
+                            <section class="ink-btn">
+                                <h3 class="ink-txt">Option 3</h3>
+                            </section>
                         </section>
                     </section>
                 </section>
