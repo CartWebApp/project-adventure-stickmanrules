@@ -4,29 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./game assets/objects/script.js"></script>
     <title>Resolution</title>
 </head>
 
 <body>
     <main>
-        <header>
-            <img src="./images/stickmen/stickman1.svg" alt="Stickman #1">
-            <img src="./images/stickmen/stickman2.svg" alt="Stickman #2">
-            <h1><span class="font-pixel">Resol</span><span class="font-reg">ution</span></h1>
-            <img src="./images/stickmen/stickman3.svg" alt="Stickman #3">
-            <img src="./images/stickmen/stickman4.svg" alt="Stickman #4">
-        </header>
+        <section id="homescreen" class>
+            <header>
+                <img src="./images/stickmen/stickman1.svg" alt="Stickman #1">
+                <img src="./images/stickmen/stickman2.svg" alt="Stickman #2">
+                <h1><span class="font-pixel">Resol</span><span class="font-reg">ution</span></h1>
+                <img src="./images/stickmen/stickman3.svg" alt="Stickman #3">
+                <img src="./images/stickmen/stickman4.svg" alt="Stickman #4">
+            </header>
 
-        <section id="start-btn">
-            <img src="/images/scroll.png" alt="Scroll Start Button">
+            <section id="start-btn">
+                <img src="/images/scroll.png" alt="Scroll Start Button">
+            </section>
+            <section id="credits-btn" class="ink-btn">
+                <h2 class="font-pixel ink-txt">Credits</h2>
+            </section>
+            <section class="bg-image"></section>
         </section>
-        <section id="credits-btn" class="ink-btn">
-            <h2 class="font-pixel ink-txt">Credits</h2>
-        </section>
-        <section id="game-overlay" class="overlay-forest hidden">
-            <section id="game-zone" class="bg-forest">
+        <section id="game-overlay" class="overlay-prolouge hidden">
+            <section id="game-zone" class="bg-prolouge">
                 <section id="speaker" class="ribbon">
                     <h2>Speaker</h2>
                 </section>
@@ -56,13 +59,13 @@
                     <section id="choices" class="hidden">
                         <h3>What will YOU do?</h3>
                         <section id="options">
-                            <section class="ink-btn">
+                            <section id="option1" class="ink-btn">
                                 <h3 class="ink-txt">Option 1</h3>
                             </section>
-                            <section class="ink-btn">
+                            <section id="option2" class="ink-btn">
                                 <h3 class="ink-txt">Option 2</h3>
                             </section>
-                            <section class="ink-btn">
+                            <section id="option3" class="ink-btn">
                                 <h3 class="ink-txt">Option 3</h3>
                             </section>
                         </section>
@@ -70,7 +73,6 @@
                 </section>
             </section>
         </section>
-        <section class="bg-image"></section>
     </main>
 </body>
 

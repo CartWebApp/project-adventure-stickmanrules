@@ -10,12 +10,6 @@ body {
     overflow: hidden;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 header {
     display: flex;
     flex-direction: row;
@@ -46,6 +40,15 @@ h3 {
 
 p {
     font-size: 24px;
+}
+
+/* Homescreen */
+#homescreen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .font-pixel {
@@ -155,6 +158,14 @@ p {
 
 /* GameZone BG Images */
 
+/* Overlay */
+
+.overlay-prolouge {
+    background: url(./images/gameZoneOverlay/prolouge.svg);
+    background-size: cover;
+    background-position: center;
+}
+
 .overlay-forest {
     background: url(./images/gameZoneOverlay/forest.svg);
     background-size: cover;
@@ -181,6 +192,14 @@ p {
 
 .overlay-sailortown {
     background: url(./images/gameZoneOverlay/sailortown.svg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Background */
+
+.bg-prolouge {
+    background: url(./images/gameZoneBG/prolouge.svg);
     background-size: cover;
     background-position: center;
 }
