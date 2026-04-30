@@ -127,7 +127,7 @@ p {
         grid-row: 14 / span 3;
         z-index: 1;
         transform: translate(-10%, -10%);
-        display: flex;
+        width: max-content;
         align-items: center;
 
         & h2 {
@@ -160,8 +160,8 @@ p {
 
 /* Overlay */
 
-.overlay-prolouge {
-    background: url(./images/gameZoneOverlay/prolouge.svg);
+.overlay-prologue {
+    background: url(./images/gameZoneOverlay/prologue.svg);
     background-size: cover;
     background-position: center;
 }
@@ -198,8 +198,8 @@ p {
 
 /* Background */
 
-.bg-prolouge {
-    background: url(./images/gameZoneBG/prolouge.svg);
+.bg-prologue {
+    background: url(./images/gameZoneBG/prologue.svg);
     background-size: cover;
     background-position: center;
 }
