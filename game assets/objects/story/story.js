@@ -10,7 +10,7 @@ export const prologue = [/*Begins will the villagers*/
 
 export const forest = [ /*The Narrator will tell most of the story*/
     {
-        id: 'p1',
+        id: 'f-p01',
         speaker: "Narrator", text: "\"This so called figure is named 'Stickman' he wasn't like the rest of the villagers-unlike us who have fur and different perspectives, Stickman was flat and had no defining features\"",
         speaker: "Narrator", text: "\"Some say his parents died in a fire and he grew up resenting the ophanage he grewn up in",
         speaker: "Narrator", text: "\"He rejected the towns folk as the towns folk rejected him which lead to them exiling him from the forest although they forgot about that\"",
@@ -20,7 +20,7 @@ export const forest = [ /*The Narrator will tell most of the story*/
 
 export const forest_p1 = [
     {
-        id: 'p2',
+        id: 'f-p02',
         speaker: "Narrator", text: "Stickmans wandered around the forest after coming back from his outing in the nearby village, he looked exhausted taking heavy steps down the dirt trail",
         speaker: "Narrator", text: "On the way back Stickman sees a strange hooded figure lurking around the trees"
     },
@@ -30,7 +30,7 @@ export const forest_p1 = [
 
 export const forest_a1 = [ /* Stickamn approachs the stranger */
     {
-        id: 'fa1',
+        id: 'f-a01',
         speaker: "Narrator", text: "Stickman cautiously approaches the figure from behind until he gets within a arms reach of the figure",
         speaker: "Narrator", text: "*Pat*",
         speaker: "The Stranger", text: "\"WHO GOES THERE!?\"",
@@ -45,9 +45,9 @@ export const forest_a1 = [ /* Stickamn approachs the stranger */
     },
 ];
 
-export const forest_a01 = [
+export const forest_a02 = [
     {
-        id: 'f-a01',
+        id: 'f-a02',
         speaker: "Narrator", text: "Stickman who has stayed isolated his entire life, signals for Stickboy to skedaddle",
     },
 ];
@@ -66,12 +66,34 @@ export const forest_c01 = [ /* The questions will be added later as it does */
     },
 ];
 
-export const call_a01 = [
+export const call_p01 = [
     {
-        id: 'c-ao1',
+        id: 'c-p01',
         speaker: "Narrator", text: "Stickman who left Stickboy in the middle of the forest is sorting his groceries when suddenly *knock* *knock* *knock* followed by silence",
         speaker: "Narrotor", text: "Stickman checks the window to see Stickboy waiting at the door, Stickman getting fed up answers the door",
-        speaker: "Stickboy", text: "Please reconsider my request, I am lost and need help",
-        speaker: "Stickboy", text: ""
+        speaker: "Stickboy", text: "Please reconsider my request, I AM lost and need help",
+        speaker: "Stickboy", text: "I wanted your help because theres nobody else like me but you.",
+    },
+];
+
+export const refuse_p01 = [
+    {
+        id: 'r-p01',
+        speaker: "Narrator", text: "Stickman pondered this, it's true, there is nobody else like him and Stickboy but the bitterness of society and the isolation clouded his judgement",
+    },
+];
+
+export const refuse_a01 = [
+    {   
+        id: 'r-a01',
+        speaker: "Narrator", text: "Stickman deciding that it wasn't worth his time rejects Stickboys plead and instantly shuts the door on him",
+    },
+];
+
+export const refuse_b01 = [
+    {
+        id: 'r-b01'
+        speaker: "Narrator", text: "After thinking about their situation Stickman agrees to take Stickboys request"
+        speaker: "Narrator", text: "Before departing Stickman takes his glasses, his bag, and his journal just in case his quest takes more than a day."
     },
 ];
