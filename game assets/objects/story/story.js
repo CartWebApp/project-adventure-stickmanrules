@@ -48,12 +48,12 @@ export const forest_p01 = [ /*The Narrator will tell most of the story*/
 export const forest_p02 = [
     {
         type: 'story',
-        speaker: "Narrator", 
+        speaker: "Narrator",
         text: "Stickmans wandered around the forest after coming back from his outing in the nearby village, he looked exhausted taking heavy steps down the dirt trail",
     },
     {
         type: 'story',
-        speaker: "Narrator", 
+        speaker: "Narrator",
         text: "On the way back Stickman sees a strange hooded figure lurking around the trees"
     }
 ];
@@ -118,10 +118,9 @@ export const forest_a01 = [ /* Stickamn approachs the stranger */
     },
     {
         type: 'choices',
+        speaker: "Narrator",
+        text: 'What will you do?',
         options: [
-            {
-                text: "What will YOU do?"
-            },
             {
                 text: "Leave Stickboy",
                 next: 'forest_a02'
@@ -190,6 +189,19 @@ export const refuse_p01 = [
         type: 'story',
         speaker: "Narrator", text: "Stickman pondered this, it's true, there is nobody else like him and Stickboy but the bitterness of society and the isolation clouded his judgement",
     },
+    {
+        type: 'choices',
+        speaker: "Narrator",
+        text: "What will you do?",
+        options: [
+            {
+                text: "Reject him", next: refuse_a01,
+            },
+            {
+                text: "Accept his request", next: refuse_b01,
+            },
+        ],
+    },
 ];
 
 export const refuse_a01 = [
@@ -202,15 +214,20 @@ export const refuse_a01 = [
 export const refuse_b01 = [
     {
         type: 'story',
-        speaker: "Narrator", text: "After thinking about their situation Stickman agrees to take Stickboys request",
-        speaker: "Narrator", text: "Before departing Stickman takes his glasses, his bag, and his journal just in case his quest takes more than a day."
+        speaker: "Narrator",
+        text: "After thinking about their situation Stickman agrees to take Stickboys request",
+    },
+    {
+        type: 'story',
+        speaker: "Narrator",
+        text: "Before departing Stickman takes his glasses, his bag, and his journal just in case his quest takes more than a day.",
     },
 ];
 
 export const mentor_p01 = [
     {
         type: 'story',
-        speaker: "Narrator", 
+        speaker: "Narrator",
         text: "Not long after departing from Stickmans house nightfalls and the pair exhausted from traveling down the long forest path, they setup camp by the riverside deciding to continue their journey in the morning"
     },
     {
@@ -264,24 +281,64 @@ export const crossing_p01 = [
     {
         type: 'story',
         speaker: "Narrator",
-        text: "They reach the edge ",
+        text: "They reach the edge of the forest though Stickman still feels reluctant about going to the villages espcially when its popular villages",
     },
     {
-        type: '',
-        speaker: "",
-        text: "",
+        type: 'choices',
+        speaker: "Narrator",
+        options: [
+            {
+                text: 'Go back', next: crossing_a01,
+            },
+            {
+                text: 'Keep going', next: crossing_b02,
+            },
+        ],
     },
-    {
-        type: '',
-        speaker: "",
-        text: "",
-    },
-    {
-        type: '',
-        speaker: "",
-        text: "",
-    },
-    
 ];
 
-export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01]
+export const crossing_a01 = [
+    {
+        type: 'story',
+        speaker: "Narrator",
+        text: "Taking back what he said, Stickman ran back home without Stickboy noticing",
+        text: "Stickboy never went back to Stickmans house assuming the kid could survive on his own in the wilds",
+    },
+];
+
+export const crossing_b02 = [
+    {
+        type: 'story',
+        speaker: "Narrator",
+        text: "Steeling himself, Stickman takes the biggest step out of the forest",
+        text: "Sunlight cresses Stickmans face and blinds him, in response Stickman shades his eyes with his hands revealing the lush world outside the forest",
+    },
+];
+
+export const tae_p01 = [
+    {
+        type: 'story',
+        speaker: "Narrator",
+        text: "Continuing down the path, Stickman and Stickboy find themselves at a fork road",
+    },
+    {
+        type: 'choices',
+        speaker: "Narrator",
+        text: "What will you do?",
+        options: [
+            {
+                text: "Go left towards the mountains",
+            },
+            {
+                text: "Continue straight ahead towards the grasslands",
+            },
+            {
+                text: "Go right towards the desert",
+            },
+        ],
+    },
+];
+
+e
+
+export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02]
