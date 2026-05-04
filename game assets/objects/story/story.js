@@ -616,7 +616,7 @@ export const guild_a01 = {
         {
             type: 'story',
             speaker: "Narrator",
-            text: "Stickman arrives at the mining equipment shop, two other hires nad waiting for him",
+            text: "Stickman arrives at the mining equipment shop, two other hires were waiting for him",
         },
         {
             type: 'story',
@@ -627,11 +627,158 @@ export const guild_a01 = {
             type: 'story',
             speaker: "Narrator",
             text: "Quest: Flint n Steel - Deliver the dynamite faster than the other hires",
+            next: 'flint_p01',
         },
+    ]
+};
+
+const flint_p01 = {
+    name: 'flint',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Gathering the dynamite, Stickman and the others head towards the mines.",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The group finds themselves at a fork, one of the roads leads to the market, another leads to a bridge, the last path leads to a empty neighborhood",
+            text: "You can only choose one path and you can't go back to the fork, each path has a different outcome that will affect your speed",
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Which path will you take?",
+            options: [
+                {
+                    text: "The Market",
+                    next: 'market_a01',
+                },
+                {
+                    text: "The Bridge",
+                    next: 'bridge_a01',
+                },
+                {
+                    text: "The Empty neighborhood",
+                    next: 'empty_a01',
+                },
+            ],
+        },
+    ],
+};
+
+const market_a01 = {
+    name: 'market_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The market is bustling with people, carts, and animals. Stickman has to weave through the crowd to get to the other side of the market.",
+            text: '+1 speed',
+        },
+    ],
+};
+
+const bridge_a01 = {
+    name: 'bridge_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The bridge is linear with carts traveling in both directions, Stickman follows the flow of the carts",
+            text: '+2 speed',
+        },
+    ],
+};
+
+const empty_a01 = {
+    name: 'empty_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The neighborhood is quiet, too quiet, suddenly a group of bandits jump out and start attacking Stickman, Stickman has to fight them off before quickly leaving the neighborhood",
+            text: '+0 speed',
+        },
+    ],
+};
+
+const flint_p02 = {
+    name: 'flint_p02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The group arrives at the first stationm, they unload supplies to trade material and check the map before leaving"
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The map shows three more branches leading towrds the mines",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "There\'s a shortcut near one of the coal burning facilities",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "There\'s a path leading straight ahead towrds the mines",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "There\'s a path leading through one of the undeveloped roads. The road is rocky and is at a steep incline",
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Which path will you take?",
+            options: [
+                {
+                    text: "Take the shortcut",
+                },
+                {
+                    text: "Go straight ahead",
+                },
+                {
+                    text: "Take the rocky path",
+                },
+            ],
+        },
+    ],
+};
+
+const shortcut_a01 = {
+    name: 'shortcut_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Its blistering hot taking the shortcut, sparks from the furenaces fly everywhere and the heat is getting intenser the closer stickman to the exit.",
+        }
     ]
 }
 
-
+const flint_p03 = {
+    name: 'flint_p03',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman arrives at the final station, shortly after the other hires arrive",
+            text: "Quickly the station workers unload the supplies of dynamite and gunpowder then deliver it to the mines",
+        },
+        {
+            type: 'story',
+            speaker: "Mine manager",
+            text: "\'Thank you all for you're hard work! When the mines open up, you'll be the first ones to get dibs on entering.\'",
+            next: 'guild_a01',
+        },
+    ]
+}
 
 const mountains_a02 = { /* + negative karma */
     name: 'mountains_a02',
