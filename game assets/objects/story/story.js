@@ -1,33 +1,41 @@
 const prologue = {
     name: 'prologue',
+    overlay_url: '/images/gameZoneOverlay/prologue.svg',
     data: [/*Begins will the villagers*/
         {
+            bg_url: '/images/gameZoneBG/prologue.svg',
             type: 'story',
             speaker: "Villager 1",
             text: "\"Hey, have you heard about the figure in the woods?.\""
         },
         {
+            bg_url: '/images/gameZoneBG/prologue.svg',
             type: 'story',
             speaker: "Villager 2",
             text: "\"They say he isolates himself in a hut in the abandoned woods and prays on the folks that go near his woods.\""
         },
         {
+            bg_url: '/images/gameZoneBG/prologue.svg',
             type: 'story',
             speaker: "Villager 3",
             text: "\"Stop joking, that story's old now everybody knows about the man in the woods.\""
         },
         {
+            bg_url: '/images/gameZoneBG/prologue.svg',
             type: 'story',
             speaker: "Villager 3",
-            text: "\"Come here, lemme tell you the story of the figure that we- all the villagers of the figures rising remember.\""
+            text: "\"Come here, lemme tell you the story of the figure that we- all the villagers of the figures rising remember.\"",
+            next: 'forest_p01'
         },
     ]
 };
 
 const forest_p01 = {
     name: 'forest_p01',
+    overlay_url: './images/gameZoneOverlay/forest.svg',
     data: [ /*The Narrator will tell most of the story*/
         {
+            bg_url: '/images/gameZoneBG/forest.svg',
             type: 'story',
             speaker: "Narrator",
             text: "\"This so called figure is named 'Stickman' he wasn't like the rest of the villagers-unlike us who have fur and different perspectives, Stickman was flat and had no defining features.\""
@@ -45,7 +53,8 @@ const forest_p01 = {
         {
             type: 'story',
             speaker: "Narrator",
-            text: "\"I don't know the exact details but I do know that he found a cabin in the woods to avoid others but ironically had to travel to the villages to get resources.\""
+            text: "\"I don't know the exact details but I do know that he found a cabin in the woods to avoid others but ironically had to travel to the villages to get resources.\"",
+            next: 'forest_p02'
         }
     ]
 };
@@ -61,7 +70,8 @@ const forest_p02 = {
         {
             type: 'story',
             speaker: "Narrator",
-            text: "On the way back Stickman sees a strange hooded figure lurking around the trees"
+            text: "On the way back Stickman sees a strange hooded figure lurking around the trees",
+            next: 'forest_a01'
         }
     ]
 };
@@ -136,11 +146,11 @@ const forest_a01 = {
                     next: 'forest_a02'
                 },
                 {
-                    text: "Question Stickboy",
+                    text: "Accept his request",
                     next: 'forest_b01'
                 },
                 {
-                    text: "Accept his request",
+                    text: "Question Stickboy",
                     next: 'forest_c01'
                 },
             ],
@@ -155,6 +165,7 @@ const forest_a02 = {
             type: 'story',
             speaker: "Narrator",
             text: "Stickman who has stayed isolated his entire life, signals for Stickboy to skedaddle",
+            next: 'call_p01'
         },
     ]
 };
@@ -178,6 +189,7 @@ const forest_c01 = {
             type: 'story',
             speaker: "Narrator",
             text: "Stickboy felt suspicous, Stickman didn't know why I had to be him or why is the boy asking for help inside the forest but he knew Stickboy wasn't trustable, with that said, he decides to question Stickboys intentions",
+            next: 'temp_ending'
         },
     ]
 };
@@ -203,7 +215,8 @@ const call_p01 = {
         {
             type: 'story',
             speaker: "Stickboy",
-            text: "I wanted your help because theres nobody else like me but you."
+            text: "I wanted your help because theres nobody else like me but you.",
+            next: 'refuse_p01',
         },
     ]
 };
@@ -253,6 +266,7 @@ const refuse_b01 = {
             type: 'story',
             speaker: "Narrator",
             text: "Before departing Stickman takes his glasses, his bag, and his journal just in case his quest takes more than a day.",
+            next: 'mentor_p01',
         },
     ]
 };
@@ -288,7 +302,8 @@ const mentor_p01 = {
         {
             type: 'story',
             speaker: "Narrator",
-            text: "He fills his water hide and turns to make it back to camp"
+            text: "He fills his water hide and turns to make it back to camp",
+            next: 'crossing_p01',
         },
     ]
 };
@@ -350,6 +365,7 @@ const crossing_a01 = {
             type: 'story',
             speaker: "narrator",
             text: "Stickboy never went back to Stickmans house assuming the kid could survive on his own in the wilds",
+            next: 'temp_ending',
         },
     ]
 };
@@ -366,6 +382,7 @@ const crossing_b02 = {
             type: 'story',
             speaker: "Narrator",
             text: "Sunlight cresses Stickmans face and blinds him, in response Stickman shades his eyes with his hands revealing the lush world outside the forest",
+            next: 'tae_p01',
         },
     ]
 };
@@ -389,9 +406,11 @@ const tae_p01 = {
                 },
                 {
                     text: "Continue straight ahead towards the grasslands",
+                    next: 'tae_b01',
                 },
                 {
                     text: "Go right towards the desert",
+                    next: 'tae_c01',
                 },
             ],
         },
@@ -417,7 +436,7 @@ const tae_b01 = {
             type: 'story',
             speaker: "Narrator",
             text: "They continue going forward towards the central planes",
-            next: 'grasslands_a01',
+            next: 'temp_ending',
         },
     ]
 };
@@ -429,7 +448,7 @@ const tae_c01 = {
             type: 'story',
             speaker: "Narrator",
             text: "The blistering heat blast the pair as they head towards the desert",
-            next: 'desert_a01',
+            next: 'temp_ending',
         },
     ]
 };
@@ -482,8 +501,14 @@ const mountains_p01 = {
             speaker: "Narrator",
             text: "What will you do",
             options: [
-                { text: "Aid the man" },
-                { text: "leave him alone" },
+                {
+                    text: "Aid the man",
+                    next: 'mountains_a01',
+                },
+                {
+                    text: "leave him alone",
+                    next: 'mountains_a02',
+                },
             ],
         },
     ]
@@ -587,7 +612,27 @@ const mountains_p02 = {
             type: 'story',
             speaker: "Guild receptionist",
             text: "\"Actually I do, here let me give the list.\"",
+            next: 'quests',
         },
+
+    ]
+};
+
+const mountains_a02 = { /* + negative karma */
+    name: 'mountains_a02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman, stubborn, continues walking towards the guild",
+            next: 'mountains_p02',
+        },
+    ]
+};
+
+const quests = {
+    name: 'quests',
+    data: [
         {
             type: 'choices',
             speaker: "Narrator",
@@ -595,22 +640,26 @@ const mountains_p02 = {
             options: [
                 {
                     text: "Flint n Steel - Deliver dynamite to the mines: addtionally place dynamite charges", // medium quest - needs a little bit of compassion
+                    next: 'guild_a01',
                 },
                 {
                     text: "You light up my world - Lanturn fluid colleting and delievering ", // easist quest - needs less compassion
+                    next: 'guild_a02',
                 },
                 {
                     text: "Pride of the drawfs - Furence operator and blacksmithing", // hardest quest - needs a ton of compassion
+                    next: 'guild_a03',
                 },
                 {
                     text: "Leave the village", // This leads to a ending
+                    next: 'leave_a01',
                 },
             ]
-        },
+        }
     ]
 };
 
-export const guild_a01 = {
+const guild_a01 = {
     name: 'guild_a01',
     data: [
         {
@@ -663,6 +712,10 @@ const flint_p01 = {
                     text: "The Empty neighborhood",
                     next: 'empty_a01',
                 },
+                {
+                    text: "Go back to the guild",
+                    next: 'quests',
+                }
             ],
         },
     ],
@@ -675,7 +728,8 @@ const market_a01 = {
             type: 'story',
             speaker: "Narrator",
             text: "The market is bustling with people, carts, and animals. Stickman has to weave through the crowd to get to the other side of the market.",
-            text: '+1 speed',
+            buff: '+1 speed',
+            next: 'flint_p02',
         },
     ],
 };
@@ -687,7 +741,8 @@ const bridge_a01 = {
             type: 'story',
             speaker: "Narrator",
             text: "The bridge is linear with carts traveling in both directions, Stickman follows the flow of the carts",
-            text: '+2 speed',
+            buff: '+2 speed',
+            next: 'flint_p02',
         },
     ],
 };
@@ -699,7 +754,8 @@ const empty_a01 = {
             type: 'story',
             speaker: "Narrator",
             text: "The neighborhood is quiet, too quiet, suddenly a group of bandits jump out and start attacking Stickman, Stickman has to fight them off before quickly leaving the neighborhood",
-            text: '+0 speed',
+            buff: '+0 speed',
+            next: 'flint_p02',
         },
     ],
 };
@@ -739,12 +795,15 @@ const flint_p02 = {
             options: [
                 {
                     text: "Take the shortcut",
+                    next: 'shortcut_a01',
                 },
                 {
                     text: "Go straight ahead",
+                    next: 'straight_a02',
                 },
                 {
                     text: "Take the rocky path",
+                    next: 'rocky_a03',
                 },
             ],
         },
@@ -758,9 +817,53 @@ const shortcut_a01 = {
             type: 'story',
             speaker: "Narrator",
             text: "Its blistering hot taking the shortcut, sparks from the furenaces fly everywhere and the heat is getting intenser the closer stickman to the exit.",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Suddenly the carts tarp caught on fire causing Stickman to put out the fire before continuing going through the shortcut",
+            buff: '+1 speed',
+            next: 'flint_p03',
         }
-    ]
-}
+    ],
+};
+
+const straight_a02 = {
+    name: 'straight_a02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The staright is very simple but it also leads to a intersection with a lot of traffic, Stickman has to wait for the carts to pass before he can continue",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman waits for a while before he eventually got tired of waiting and turned down another road to get through the traffic",
+            buff: '+0 speed',
+            next: 'flint_p03',
+        }
+    ],
+};
+
+const rocky_a03 = {
+    name: 'rocky_a03',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The road looks very dangerous, its steep, rocky, and has chance for rocks tumbling down the mountain",
+            next: 'flint_p03',
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Either way Stickman steels himself and carefully but quickly makes his way through the rocky path",
+            buff: '+2 speed',
+            next: 'flint_p03',
+        },
+    ],
+};
 
 const flint_p03 = {
     name: 'flint_p03',
@@ -777,19 +880,38 @@ const flint_p03 = {
             text: "\'Thank you all for you're hard work! When the mines open up, you'll be the first ones to get dibs on entering.\'",
             next: 'guild_a01',
         },
-    ]
-}
+    ],
+};
 
-const mountains_a02 = { /* + negative karma */
-    name: 'mountains_a02',
+const guild_a02 = {
+    name: 'guild_a02',
     data: [
         {
             type: 'story',
             speaker: "Narrator",
-            text: "Stickman, stubborn, continues walking towards the guild",
-            next: 'mountains_p02',
+            text: "Stickman arrives at the appointed location but to his surprise, it wasn't a shop but a open oil field with workers striking the ground and oil gushing out",
         },
-    ]
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman is called from a distance by a worker who is waving his arm, signaling for Stickman to come over",
+        },
+        {
+            type: 'story',
+            speaker: "Worker",
+            text: "\"Hey you! Yeah you, come here, are you the temp hirer from the guild\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman nods in confirmation and the worker continues",
+        },
+        {
+            type: 'story',
+            speaker: "Worker",
+            text: "\"\"",
+        }
+    ],
 };
 
 const grasslands_a01 = {
@@ -815,15 +937,22 @@ const desert_a01 = {
             type: 'story',
             speaker: "Narrator",
             text: "The heats gets even stronger when the pair approach, so hot that they must retreat",
-        },
-        {
-            type: 'story',
-            speaker: "Narrator",
-            text: "This part of the game isn't done yet, come back when it is",
+            next: 'temp_ending'
         },
     ]
 };
 
-export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a02, grasslands_a01, desert_a01]
 
-export const tempCompleteStory = [prologue, forest_p01 /* Add just the neccesary objects to complete one flow. */]
+const temp_ending = {
+    name: 'temp_ending',
+    data: [
+        {
+            type: 'story',
+            speaker: 'Dev Team',
+            text: "This part of the game isn't done yet, come back when it is",
+            next: 'temp_ending',
+        }
+    ]
+}
+
+export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a01, mountains_a02, mountains_p02, quests, guild_a01, guild_a02, flint_p01, market_a01, bridge_a01, empty_a01, flint_p02, shortcut_a01, straight_a02, rocky_a03, flint_p03, grasslands_a01, desert_a01, temp_ending]

@@ -106,6 +106,8 @@ p {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
 
 #game-zone {
@@ -113,6 +115,8 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: center;
 
 
 
@@ -123,10 +127,10 @@ p {
     grid-template-columns: repeat(24, 1fr);
 
     & #speaker {
-        grid-column: 4 / span 2;
+        grid-column: 4 / span 10;
         grid-row: 14 / span 3;
         z-index: 1;
-        transform: translate(-10%, -10%);
+        transform: translate(-10px, -10px);
         width: max-content;
         align-items: center;
 
@@ -157,87 +161,6 @@ p {
 
     }
 }
-
-/* GameZone BG Images */
-
-/* Overlay */
-
-.overlay-prologue {
-    background: url(./images/gameZoneOverlay/prologue.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay-forest {
-    background: url(./images/gameZoneOverlay/forest.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay-desert {
-    background: url(./images/gameZoneOverlay/desert.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay-snow {
-    background: url(./images/gameZoneOverlay/snow.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay-grassland {
-    background: url(./images/gameZoneOverlay/grassland.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.overlay-sailortown {
-    background: url(./images/gameZoneOverlay/sailortown.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-/* Background */
-
-.bg-prologue {
-    background: url(./images/gameZoneBG/prologue.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-forest {
-    background: url(./images/gameZoneBG/forest.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-desert {
-    background: url(./images/gameZoneBG/desert.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-snow {
-    background: url(./images/gameZoneBG/snow.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-grassland {
-    background: url(./images/gameZoneBG/grassland.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-.bg-sailortown {
-    background: url(./images/gameZoneBG/sailortown.svg);
-    background-size: cover;
-    background-position: center;
-}
-
-
-
 
 .ribbon {
     --r: .8em;
