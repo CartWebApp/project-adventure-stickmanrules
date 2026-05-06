@@ -11,13 +11,8 @@ const storyBox = document.getElementById('story');
 const story = document.querySelector('#story > p');
 const nextBtn = document.getElementById('next-btn');
 const choices = document.getElementById('choices');
-const choicesText = document.querySelector('#choices');
-const option0 = document.getElementById('option0');
-const optionText0 = document.querySelector('#option0 > h3');
-const option1 = document.getElementById('option1');
-const optionText1 = document.querySelector('#option1 > h3');
-const option2 = document.getElementById('option2');
-const optionText2 = document.querySelector('#option2 > h3');
+const optionBtns = document.querySelectorAll('#options > *');
+const optionValues = document.querySelectorAll('#options > * > h3');
 
 // Start Game
 function startGame() {
@@ -47,11 +42,19 @@ function updateGZBG() {
 
 updateGZBG();
 
+function hideOptions(btnNum) {
+    optionBtns[btnNum].classList.add('hidden');
+}
+
+
+function showOptions(btnNum) {
+    optionBtns[btnNum].classList.remove('hidden');
+}
 
 function updateStory() {
     let storyPart = completeStory[storyPartNum].data;
-    let storySpeakers = storyPart.map(storyPart => storyPart.speaker)
-    let storyTexts = storyPart.map(storyPart => storyPart.text)
+    let storySpeakers = storyPart.map(sP => sP.speaker)
+    let storyTexts = storyPart.map(sP => sP.text)
 
 
 
@@ -67,14 +70,19 @@ function updateStory() {
 
         // Updates options
         const options = storyPart[dialogueNum].options;
-        const optionsList = options.map(options => options.text);
-        optionText0.innerHTML = optionsList[0];
-        optionText1.innerHTML = optionsList[1];
-        optionText2.innerHTML = optionsList[2];
+        const optionsList = options.map(o => o.text);
+
+        for (let i = 0; i < optionBtns.length; i++) {
+            hideOptions(i);
+        }
+
+        for (let i = 0; i < optionsList.length; i++) {
+            showOptions(i);
+            optionValues[i].innerHTML = optionsList[i];
+        }
 
         dialogueNum++;
         return
-        // const storyOptions = storyPart.map
     }
 
     if (dialogueNum > (storyPart.length - 1)) {
@@ -100,7 +108,7 @@ updateStory();
 function btnChoices(btnNum) {
     let storyPart = completeStory[storyPartNum].data;
     let options = storyPart[(dialogueNum - 1)].options;
-    let optionRoute = options.map(options => options.next);
+    let optionRoute = options.map(o => o.next);
     let routeFinal = optionRoute[(Number(btnNum))];
     let storyIndex = completeStory.findIndex(n => n.name === routeFinal);
 
@@ -113,12 +121,12 @@ function btnChoices(btnNum) {
     storyBox.classList.remove('hidden');
 
     // Updates speaker for story
-    let storySpeakers = storyPart.map(storyPart => storyPart.speaker)
+    let storySpeakers = storyPart.map(sP => sP.speaker)
     const storySpeaker = storySpeakers[dialogueNum];
     speaker.innerHTML = storySpeaker;
 
     // Updates story
-    let storyTexts = storyPart.map(storyPart => storyPart.text)
+    let storyTexts = storyPart.map(sP => sP.text)
     const storyText = storyTexts[dialogueNum];
     story.innerHTML = storyText;
 
@@ -127,8 +135,10 @@ function btnChoices(btnNum) {
 }
 
 
-option0.addEventListener('click', function () { btnChoices('0') });
-option1.addEventListener('click', function () { btnChoices('1') });
-option2.addEventListener('click', function () { btnChoices('2') });
+
+optionBtns[0].addEventListener('click', function () { btnChoices('0') });
+optionBtns[1].addEventListener('click', function () { btnChoices('1') });
+optionBtns[2].addEventListener('click', function () { btnChoices('2') });
+optionBtns[3].addEventListener('click', function () { btnChoices('3') });
 
 nextBtn.addEventListener('click', function () { updateStory() });
