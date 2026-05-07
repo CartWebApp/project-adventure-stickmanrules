@@ -753,6 +753,9 @@ const quests = {
                     next: 'guild_a03',
                 },
                 {
+                    text: "I've finished all the quests" //This should appear after the player finishes all the quests
+                },
+                {
                     text: "Leave the village", // This leads to a ending
                     next: 'leave_a01',
                 },
@@ -1230,7 +1233,7 @@ const lantern_b02 = {
         {
             type: 'story',
             speaker: "Narrator",
-            text: "Stickman rushes over to the manager still dripping wet from the oil",
+            text: "Stickman rushes over to the manager still dreanched in oil",
         },
         {
             type: 'story',
@@ -1252,7 +1255,317 @@ const lantern_b02 = {
             speaker: "Narrator",
             text: "The manager rolled his eye followed Stickman",
         },
-        
+
+    ],
+};
+
+const lantern_b03 = {
+    name: 'lantern_b03',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Arriving at the border between the oil field and the forest, a lake of oil engulfed the area, the manager wiped his eyes before looking again"
+        },
+        {
+            type: 'story',
+            speaker: "Manager",
+            text: "\"Oh my days... LOOK AT ALL OF THIS OIL, WE'LL NEVER RUN OUT FOR MONTHS\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The manager grabbed Stickmans hand and shooked it continuing to say.",
+        },
+        {
+            type: 'story',
+            speaker: "Manager",
+            text: "\"You're the great hire we've gotten this past year, for this I gotta pay you double, no triple the original amount!\""
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman was stunned but greatfully took the offer, but gave it to Stickboy instead because it was heavy and Stickboy needed to pickup his weight",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman waved bye to the manager as he walked back to the guild with Stickboy slowly trailing behind him",
+            next: 'quests',
+        },
+    ],
+};
+
+const guild_a03 = {
+    name: 'guild_a03',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman arrives at the great furnace, the heat is intense, the sound of metal clanging fills the air, and the look on the workers... razor sharp and focused, intimidating Stickman",
+        },
+        {
+            type: 'story',
+            speaker: "Master Blacksmith",
+            text: "\"Aye lad, stop standing there yer gonna get burned\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The man was big, intimidating, and looked like he could crush Stickman if he wanted to, but Stickman although timid, handed in the flyer to help the smith",
+        },
+        {
+            type: 'story',
+            speaker: "Master Blacksmith",
+            text: "\"Ahh, so someone actually took our request aye? Well, works for me.\"",
+        },
+        {
+            type: 'story',
+            speaker: "Masther Blacksmith",
+            text: "\"Listen hear, yer job is simple and very risk free, all ya gotta do is hand us the materials, but make sures its correct, the materials are that way, have a look before you start yer shift.\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman nods, the task was simple, tendious but still a easy job nontheless. Besides the Master Blacksmith looked intimidating but he was kind and direct Stickman thought to himself",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman walked over to the many creates scattered around the workshop, the crates were filled with different materials, some were labeled while others weren't, this annoyed Stickman but he new what most of the materials were from his time in the forest.",
+            next: "pride_p01",
+        },
+    ],
+};
+
+const materials_a01 = {
+    name: 'materials_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "There three materials Iron: medium :raw , Coal: light :Coarse, Pig Iron: medium :refined, and Obsidian: heavy : raw",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman notes this down before putting on his gloves and googles and starting his shift",
+            next: 'pride_p01',
+        },
+    ]
+}
+
+const materials_a02 = {
+    name: 'materials_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "There three materials Iron: medium :raw , Coal: light :Coarse, Pig Iron: medium :refined, and Obsidian: heavy : raw",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman notes this down before putting on his gloves and googles and starting his shift",
+            next: 'pride_p01',
+        },
+    ]
+}
+
+const materials_a03 = {
+    name: 'materials_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "There three materials Iron: medium :raw , Coal: light :Coarse, Pig Iron: medium :refined, and Obsidian: heavy : raw",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman notes this down before putting on his gloves and googles and starting his shift",
+            next: 'pride_p01',
+        },
+    ]
+}
+
+const pride_p01 = {
+    name: 'pride_p01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman starts off with the smelting station, as soon as he gets there",
+        },
+        {
+            type: 'story',
+            speaker: "Smelter worker",
+            text: "\"Oi, hire we need some raw rocks ova here make sures its ta light, shiny one.\"",
+            next: 'pride_a01',
+        },
+    ]
+};
+
+const pride_a01 = {
+    name: 'pride_a01',
+    data: [
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Which material will you give the worker?",
+            options: [
+                {
+                    text: "Coal",
+                    next: 'wrong_a01',
+                },
+                {
+                    text: "Iron",
+                    next: 'pride_a02',
+                },
+                {
+                    text: "Pig Iron",
+                    next: 'wrong_a01',
+                },
+                {
+                    text: "Obsidian",
+                    next: 'wrong_a01',
+                },
+                {
+                    text: "Check the crates again",
+                    next: 'materials_a01',
+                },
+            ],
+        },
+    ],
+};
+
+const pride_a02 = {
+    name: 'pride_a02',
+    data: [
+        {
+            type: 'stoy',
+            speaker: "Smelter worker",
+            text: "\"Thank, go down the line were the other workers are, they'll tell you what to do next.\"",
+            next: 'pride_p02',
+        },
+    ],
+};
+
+const pride_p02 = { 
+    name: 'pride_p02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman contineus to the next station, the workers are casting and hammering metals",
+        },
+        {
+            type: 'story',
+            speaker: "Hammer worker",
+            text: "\"Hire get over here quickly, the buckets a bit dry on minerals, get me some of the fine stuff.\"",
+            next: 'pride_a01',
+        },
+    ],
+};
+
+const pride_a03 = {
+    name: 'pride_a03',
+    data: [
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Which material will you give the worker?",
+            options: [
+                {
+                    text: "Coal",
+                    next: 'wrong_a01',
+                },
+                {
+                    text: "Iron",
+                    next: 'wrong_a01',
+                },
+                {
+                    text: "Pig Iron",
+                    next: 'pride_p02',
+                },
+                {
+                    text: "Obsidian",
+                    next: 'wrong_a01',
+                },
+                {
+                    text: "Check the crates again",
+                    next: 'materials_a01',
+                },
+            ],
+        },
+    ],
+};
+
+
+const pride_a04 = {
+    name: 'pride_a04',
+    data: [
+        {
+            type: 'story',
+            speaker: "Hammer Worker",
+            text: "\"Great work, move on over, the next station sounds like its in a warzone.\"",
+            next: 'pride_p03',
+        },
+    ],
+};
+
+const pride_p03 = {
+    name: 'pride_p03',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Quickly arriving at the next station, it is loud, choatic, and the workers, as the worker said before, its a complete warzone",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The smiths are panicking, every thing they strike shatters to pieces, they yelling \"WE WON'T MAKE THE DEADLINE\" repeatedly, the manager is trying to calm them down but his voice is drowned out by the noise of the smiths and hammers striking",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The manager notices Stickman and rushes over to him, \"Hire! Sorry but can you get the obsidian, everything is in melt down without.\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman taken aback that the manager gave him the actual name on the meterial quickly snapped into action, rushing to the creates with obsidian but struggles to move it.",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Checking inside the create, Stickman find that the obsidian was a giant block. making it impossible to lift over to the workers",
+        },
+    ],
+};
+
+const wrong_a02 = {
+    name: 'wrong_a02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Hammer worker",
+            text: "\"Not that one, hurry and get the right one next.\"",
+            next: 'pride_a03',
+        }
+    ]
+}
+
+const wrong_a01 = {
+    name: 'wrong_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Smelter worker",
+            text: "\"This is the wrong one, hurry get the right one.\"",
+            next: 'pride_a01',
+        },
     ],
 };
 
@@ -1325,4 +1638,4 @@ const in_progress = {
     ]
 }
 
-export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a01, mountains_a02, mountains_p02, quests, guild_a01, guild_a02, lantern_a01, lantern_a02, lantern_a03, lantern_b01, lantern_p02, flint_p01, market_a01, bridge_a01, empty_a01, flint_p02, shortcut_a01, straight_a02, rocky_a03, flint_p03, grasslands_a01, desert_a01, in_progress]
+export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a01, mountains_a02, mountains_p02, quests, guild_a01, guild_a02, guild_a03, lantern_a01, lantern_a02, lantern_a03, lantern_b01, lantern_b02, lantern_b03, lantern_p02, flint_p01, market_a01, bridge_a01, empty_a01, flint_p02, shortcut_a01, straight_a02, rocky_a03, flint_p03, materials_a01, materials_a02, materials_a03, pride_a01, pride_a02, pride_a03, pride_a04, pride_p01, pride_p02, pride_p03, wrong_a01, wrong_a02, grasslands_a01, desert_a01, in_progress];

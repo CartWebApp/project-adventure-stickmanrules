@@ -140,5 +140,6 @@ optionBtns[0].addEventListener('click', function () { btnChoices('0') });
 optionBtns[1].addEventListener('click', function () { btnChoices('1') });
 optionBtns[2].addEventListener('click', function () { btnChoices('2') });
 optionBtns[3].addEventListener('click', function () { btnChoices('3') });
+optionBtns[4].addEventListener('click', function () { btnChoices('4') });
 
 nextBtn.addEventListener('click', function () { updateStory() });
