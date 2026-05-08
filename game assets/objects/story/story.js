@@ -1508,7 +1508,7 @@ const pride_a04 = {
         {
             type: 'story',
             speaker: "Hammer Worker",
-            text: "\"Great work, move on over, the next station sounds like its in a warzone.\"",
+            text: "\"Great work, move on over, the forge sounds like its in a warzone.\"",
             next: 'pride_p03',
         },
     ],
@@ -1520,7 +1520,7 @@ const pride_p03 = {
         {
             type: 'story',
             speaker: "Narrator",
-            text: "Quickly arriving at the next station, it is loud, choatic, and the workers, as the worker said before, its a complete warzone",
+            text: "Quickly arriving at the forge, it is loud, choatic, and the workers, as the worker said before, its a complete warzone",
         },
         {
             type: 'story',
@@ -1542,8 +1542,88 @@ const pride_p03 = {
             speaker: "Narrator",
             text: "Checking inside the create, Stickman find that the obsidian was a giant block. making it impossible to lift over to the workers",
         },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman saw a pickaxe nearby but the sounds of frenized smiths echoed through the furnace",
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "What will you do?",
+            options: [
+                {
+                    text: "Use the pickaxe",
+                },
+                {
+                    text: "Call upon the smiths",
+                },
+            ],
+        },
     ],
 };
+
+const pride_b01 = {
+    name: 'pride_b01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman grabbed the pickaxe, as wrung at the black rock",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "*tink* *tink* Strike after strike Stickman relentlessly bombards the obsidian, eventuallty he breaks it down into carryable chucks.",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Although tired for mining the obsidian, Stickman rushes the obsidian back to the forge",
+        },
+    ],
+};
+
+const pride_b02 = {
+    name: 'pride_b02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Manager",
+            text: "\"You're here, quickly take in to the smiths.\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman brings the smiths, in the blink of a eye, all of the obsidian he was carrying disappeared",
+        },
+        {
+            type: 'story',
+            speaker: "Manager",
+            text: "\"Good work out there Stickman, its sad that you're here for today only but you keep the workshop going on.\"",
+            text: "\"Go get some rest, I'll invite you to the next work party.\"",
+            text: "\"oh and take this pickaxe as a little token from us\"",
+            next: 'quests',
+        },
+    ],
+};
+
+const cave_p01 = {
+    name: 'cave_p01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Guild receptionist",
+            text: "\"You've already done all of the quest? Great, the grand reopening of the minings will be happening the next day\"",
+            text: "\"Go ahead and take a rest in the room upstairs\""
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "A large crowd erupted in the streets, Stickman annoyed, checked outsided the windows to see a crowd of townfolk going to the mines"
+        }
+    ]
+}
 
 const wrong_a02 = {
     name: 'wrong_a02',
