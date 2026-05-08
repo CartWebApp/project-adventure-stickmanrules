@@ -1879,6 +1879,251 @@ const peak_a01 = {
             speaker: "Narrator",
             text: "Stickman tries to hold on to Stickboy only to phase through him",
         },
+        {
+            type: 'story',
+            speaker: "Stickboy",
+            text: "\"Sorry, but it was a good run, you're done so much for the people, you are different now, you're not alone.\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickboy vanished before Stickmans eyes, again visions past by Stickman, visions of his journey",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickboy was never truly with Stickman, all the doubt of his reflection fade away as memories of Stickboys fades as well",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman continues through the darkness, suddenly snow caresses his face",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Light peaks through when Stickman turns the corner of the cave, a draft of cold air floods the cave",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Exiting the cave, a white light blinds Stickman",
+        },
+        {
+            type: "story",
+            speaker: "Narrator",
+            text: "Winter covered the vally even more than the previous mountains, rivers still flowed, and Stickman notices a pathway leading from the cave",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman takes the path and traverses through the snowy plain, reaching a flat point in the path, Stickman heads to a nearby river",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Looking at his reflection, no more are there voices, no more are there doubts, just Stickman",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Getting up, Stickman wondered if he should continue down the path to find a village but he felt homesick and wanted to go home but then again Stickman was still dirty from when he exited the cave and he didn't want to put up the impression that he was homeless or broke",
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "What will you do?",
+            options: [
+                {
+                    text: "Continue down the path",
+                },
+                {
+                    text: "Rebuild your life",
+                    next: 'rebuild_a01',
+                },
+                {
+                    text: "Take a bath in the river",
+                    next: 'bath_a01',
+                },
+            ],
+        },
+    ],
+};
+
+const continue_a01 = {
+    name: 'continue_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman continued down the path, its empty, no animals, no bugs, no villagers, only frozen tree litter the blanketed forest",
+        },
+        {
+            type: 'story',
+            speaker: "Stickman",
+            text: "Stickman talks to himself, \"Its quiet, its uncomfortable now, the life I once had, feels so foreign, life I cherished, feels so lonenly\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Still monologing to himself, Stickman comes across wagon tracks",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman stops his monolog and follows the tracks in a hurry",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman see a troubled man trying to push his cart up a hill, deja vu passed over him",
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Help the man?",
+            options: [
+                {
+                    text: "Yes",
+                },
+                {
+                    text: "No",
+                },
+            ],
+        },
+    ],
+};
+
+const xue_a01 = {
+    name: 'xue_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman gives the man the cold shoulder, leaving him and going ahead to find the village and entering it"
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The streets are empty and most of the buildings are snowed in",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "After exploring the village for a while, Stickman leaves through a forest exit to find another place to settle in",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The forest for the most part is empty until Stickman come across a abandoned hut",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Its run down but barely holding and it looks like nobody as been in this part of the forest for a while",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman enters the house to inspect it tracks of people and usable tools or items",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "He finds an axe, a sheer, and some old bedding slightly covered in snow",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "He first takes the bedding and dusts it off before leaving it to hang on a nearby tree",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Next he takes the axe then searches for dead trees before cutting them down and hauling it over to the hut",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "He takes the sheers and carefully cuts off the branches, afterwards he cuts the wood into planks and carefully places it over the holes of the hut",
+        },
+    ],
+};
+
+const bath_a01 = {
+    name: 'bath_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "If Stickman were to go to town, he rather look decent then rancid",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Without hesitation, Stickman dives into the water, regret instantly fills his body",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Moments later. Stickman becomes Sticksicle and slowly drifts down the river",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Years later, a village finds Stickmans frozen body, but thinking its a rare sculpture, they bring it to a frozen museum where Stickman now lies eternally"
+        },
+    ],
+};
+
+const rebuild_a01 = {
+    name: 'rebuild_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman felt like hes done enough on his journey and remembered the comfort of his life before his journey",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "He went to the forest and with his pickaxe, he shattered rocks, collected woods, and kindle",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "He set up a temporary camp ground, made crude tools, and began to rebuild his old life",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Felling tree after tree, Stickman gathers enough logs to make a small cabin",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Weeks later Stickman finishes his cabin, its small, simple but it gets the job done",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Months past by Stickman, hes expanded his cabin and lives in isolation, but rustling in the bushes, curious eyes stares at Stickman inside his cabin",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman had a feeling of deja vu, walking outside he scans his surroundings",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The bushes rustle and out comes a young villager, timidly the boy say",
+        },
+        {
+            type: 'story',
+            speaker: "Young Villager",
+            text: "\"Can you help me find my villager?\"",
+        },
     ],
 };
 
