@@ -11,6 +11,7 @@ const storyBox = document.getElementById('story');
 const story = document.querySelector('#story > p');
 const nextBtn = document.getElementById('next-btn');
 const choices = document.getElementById('choices');
+const choicesTxt = document.querySelector('#choices > h3');
 const optionBtns = document.querySelectorAll('#options > *');
 const optionValues = document.querySelectorAll('#options > * > h3');
 
@@ -51,12 +52,50 @@ function showOptions(btnNum) {
     optionBtns[btnNum].classList.remove('hidden');
 }
 
+
+// Quest completion tracker
+let questsCompletedSet = []
+
+function canLeaveTown() {
+    return questsCompletedSet.length >= 3
+}
+
+function logQuestCompletion(questName) {
+    if (questName) {
+        questsCompletedSet = [...new Set([...questsCompletedSet, questName])]
+    }
+}
+
+
+// Delivery quest speed
+let speedBuff = 0;
+
+function finalSpeedChecker() {
+    
+}
+
+function checkForSpeed(buffValue) {
+    if (buffValue) {
+        speedBuff = speedBuff + Number(buffValue);
+        console.log('New speed?')
+    }
+}
+
+
 function updateStory() {
     let storyPart = completeStory[storyPartNum].data;
     let storySpeakers = storyPart.map(sP => sP.speaker)
     let storyTexts = storyPart.map(sP => sP.text)
 
-
+    if (canLeaveTown()) {
+        questsCompletedSet = [];
+        let storyIndex = completeStory.findIndex(n => n.name === 'quests_completed');
+        storyPartNum = storyIndex;
+        dialogueNum = 0;
+        storyPart = completeStory[storyPartNum].data;
+        
+        updateStory();
+    }
 
     if (dialogueNum == (storyPart.length - 1) && storyPart[dialogueNum].type == 'choices') {
         // Toggles Choices to view
@@ -67,6 +106,10 @@ function updateStory() {
         // Updates speaker for choices
         const storySpeaker = storySpeakers[dialogueNum];
         speaker.innerHTML = storySpeaker
+
+        // Updates header
+        const headerTxt = storyPart[dialogueNum].text;
+        choicesTxt.innerHTML = headerTxt;
 
         // Updates options
         const options = storyPart[dialogueNum].options;
@@ -81,7 +124,6 @@ function updateStory() {
             optionValues[i].innerHTML = optionsList[i];
         }
 
-        dialogueNum++;
         return
     }
 
@@ -92,22 +134,28 @@ function updateStory() {
         storyPartNum = storyIndex;
         dialogueNum = 0;
         updateStory();
-    } else {
-        const storySpeaker = storySpeakers[dialogueNum];
-        const storyText = storyTexts[dialogueNum];
-        speaker.innerHTML = storySpeaker;
-        story.innerHTML = storyText;
-        updateGZOverlay();
-        updateGZBG();
-        dialogueNum++;
+        return
     }
+    
+    
+    const storySpeaker = storySpeakers[dialogueNum];
+    const storyText = storyTexts[dialogueNum];
+    speaker.innerHTML = storySpeaker;
+    story.innerHTML = storyText;
+    updateGZOverlay();
+    updateGZBG();
+
+    logQuestCompletion(storyPart[dialogueNum].questCompleted);
+    checkForSpeed(storyPart[dialogueNum].buffValue);
+
+    dialogueNum++;
 }
 
 updateStory();
 
 function btnChoices(btnNum) {
     let storyPart = completeStory[storyPartNum].data;
-    let options = storyPart[(dialogueNum - 1)].options;
+    let options = storyPart[dialogueNum].options;
     let optionRoute = options.map(o => o.next);
     let routeFinal = optionRoute[(Number(btnNum))];
     let storyIndex = completeStory.findIndex(n => n.name === routeFinal);
@@ -140,6 +188,5 @@ optionBtns[0].addEventListener('click', function () { btnChoices('0') });
 optionBtns[1].addEventListener('click', function () { btnChoices('1') });
 optionBtns[2].addEventListener('click', function () { btnChoices('2') });
 optionBtns[3].addEventListener('click', function () { btnChoices('3') });
-optionBtns[4].addEventListener('click', function () { btnChoices('4') });
 
 nextBtn.addEventListener('click', function () { updateStory() });

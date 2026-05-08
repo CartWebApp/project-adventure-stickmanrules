@@ -25,7 +25,7 @@ const prologue = {
             type: 'story',
             speaker: "Villager 3",
             text: "\"Come here, lemme tell you the story of the figure that we- all the villagers of the figures rising remember.\"",
-            next: 'forest_p01'
+            next: 'bridge_a01'
         },
     ]
 };
@@ -391,6 +391,7 @@ const crossing_p01 = {
             bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
+            text: 'What will YOU do?',
             options: [
                 {
                     text: 'Go back',
@@ -752,17 +753,29 @@ const quests = {
                     text: "Pride of the drawfs - Furence operator and blacksmithing", // hardest quest - needs a ton of compassion
                     next: 'guild_a03',
                 },
-                {
-                    text: "I've finished all the quests" //This should appear after the player finishes all the quests
-                },
-                {
-                    text: "Leave the village", // This leads to a ending
-                    next: 'leave_a01',
-                },
             ]
         }
     ]
 };
+
+const quests_completed = {
+    name: 'quests_completed',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
+    data: [
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'choices',
+            speaker: 'Stickboy',
+            text: "I've finished all the quests", //This should appear after the player finishes all the quests
+            options: [
+                {
+                    text: "Leave the village", // This leads to a ending
+                    next: 'in_progress',
+                },
+            ]
+        }
+    ]
+}
 
 const guild_a01 = {
     name: 'guild_a01',
@@ -844,6 +857,7 @@ const market_a01 = {
             speaker: "Narrator",
             text: "The market is bustling with people, carts, and animals. Stickman has to weave through the crowd to get to the other side of the market.",
             buff: '+1 speed',
+            buffValue: '1',
             next: 'flint_p02',
         },
     ],
@@ -859,6 +873,7 @@ const bridge_a01 = {
             speaker: "Narrator",
             text: "The bridge is linear with carts traveling in both directions, Stickman follows the flow of the carts",
             buff: '+2 speed',
+            buffValue: '2',
             next: 'flint_p02',
         },
     ],
@@ -874,6 +889,7 @@ const empty_a01 = {
             speaker: "Narrator",
             text: "The neighborhood is quiet, too quiet, suddenly a group of bandits jump out and start attacking Stickman, Stickman has to fight them off before quickly leaving the neighborhood",
             buff: '+0 speed',
+            buffValue: '0',
             next: 'flint_p02',
         },
     ],
@@ -952,6 +968,7 @@ const shortcut_a01 = {
             speaker: "Narrator",
             text: "Suddenly the carts tarp caught on fire causing Stickman to put out the fire before continuing going through the shortcut",
             buff: '+1 speed',
+            buffValue: '1',
             next: 'flint_p03',
         }
     ],
@@ -973,6 +990,7 @@ const straight_a02 = {
             speaker: "Narrator",
             text: "Stickman waits for a while before he eventually got tired of waiting and turned down another road to get through the traffic",
             buff: '+0 speed',
+            buffValue: '0',
             next: 'flint_p03',
         }
     ],
@@ -995,12 +1013,13 @@ const rocky_a03 = {
             speaker: "Narrator",
             text: "Either way Stickman steels himself and carefully but quickly makes his way through the rocky path",
             buff: '+2 speed',
+            buffValue: '2',
             next: 'flint_p03',
         },
     ],
 };
 
-const flint_p03 = {
+const flint_p03 = { //quest end//
     name: 'flint_p03',
     overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
@@ -1020,6 +1039,22 @@ const flint_p03 = {
         },
     ],
 };
+
+const flint_p04 = {
+    name: 'flint_p04',
+    data: [
+        {
+            type: 'story',
+            speaker: "Mine Manager",
+            text: "You're a tad late bud, but still you brought the mats over",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "",
+        },
+    ]
+}
 
 const guild_a02 = {
     name: 'guild_a02',
@@ -1259,7 +1294,7 @@ const lantern_b02 = {
     ],
 };
 
-const lantern_b03 = {
+const lantern_b03 = { //quest end (same ending for oil)//
     name: 'lantern_b03',
     data: [
         {
@@ -1292,6 +1327,7 @@ const lantern_b03 = {
             speaker: "Narrator",
             text: "Stickman waved bye to the manager as he walked back to the guild with Stickboy slowly trailing behind him",
             next: 'quests',
+            questCompleted: 'oil',
         },
     ],
 };
@@ -1451,7 +1487,7 @@ const pride_a02 = {
     ],
 };
 
-const pride_p02 = { 
+const pride_p02 = {
     name: 'pride_p02',
     data: [
         {
@@ -1554,9 +1590,11 @@ const pride_p03 = {
             options: [
                 {
                     text: "Use the pickaxe",
+                    next: 'pride_b01'
                 },
                 {
                     text: "Call upon the smiths",
+                    next: 'pride_b02',
                 },
             ],
         },
@@ -1584,7 +1622,7 @@ const pride_b01 = {
     ],
 };
 
-const pride_b02 = {
+const pride_b02 = { //quest ending//
     name: 'pride_b02',
     data: [
         {
@@ -1604,6 +1642,7 @@ const pride_b02 = {
             text: "\"Go get some rest, I'll invite you to the next work party.\"",
             text: "\"oh and take this pickaxe as a little token from us\"",
             next: 'quests',
+            questCompleted: 'mining',
         },
     ],
 };
@@ -1620,10 +1659,228 @@ const cave_p01 = {
         {
             type: 'story',
             speaker: "Narrator",
-            text: "A large crowd erupted in the streets, Stickman annoyed, checked outsided the windows to see a crowd of townfolk going to the mines"
-        }
-    ]
+            text: "A large crowd erupted in the streets, Stickman annoyed, checked outsided the windows to see a crowd of townfolk going to the mines",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman hurries out of bed and exits the guild, its hard to walk around the city, Stickman held on to Stickboys hand while traveling through the crowd"
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "After a bit of crowd surfing the duo find themselves at the front of the parade.",
+            text: "Theres a empty stage with a pedal, shortly after the mayor arrives taking the stand",
+        },
+        {
+            type: 'story',
+            speaker: "Mayor",
+            text: "\"Good morning everyone, today is a very momentous occasion and its all thanks to a roamer named Stickman, he has dealt with the biggest resource blockages and has allowed us to continue operating the mines as we once have!\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The Crowd cheered Stickmans name as a explosion erpouts behind the mayor, the mine entrence is revealed as the dust settles",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman hides in a ally waiting for the crowd to disperse",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "While waiting Stickman looks at Stickboy and thinks to himself, after the journey hes been through, is it still worth it to continue?",
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Will continue?",
+            options: [
+                {
+                    text: "Keep going",
+                    next: 'cave_a01',
+                },
+                {
+                    text: "Give up",
+                    next: 'cave-b01',
+                },
+            ],
+        },
+    ],
+};
+
+const cave_a01 = {
+    name: 'cave_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman decides hes to far to give up now, making his way to the cave, taking a lantern before entering",
+        },
+    ],
+};
+
+const cave_b01 = {
+    name: 'cave_b01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman felt like he was doing something good for once but couldn't shake off the doubt that has cloud him his entire life."
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman looks at Stickboy",
+        },
+        {
+            type: 'story',
+            speaker: "Stickman",
+            text: "\"I'm sorry but I can't keep going.\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman pats Stickboys head before leaving to his forest",
+        },
+    ],
+};
+
+const cave_p02 = {
+    name: 'cave_p02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Using the fruits of his labor, Stickman lit the lantern then followed a rope leading from the enternce into the darkness",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman came across a split road with a sign pointing in two directs, The \"Quarry\" and \"Xue peak\"",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The quarry had a trail of lanterns piercing the darkness, No one went to Xue peak, it was dark and the air was cold and dense"
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Where do you want to go?",
+            options: [
+                {
+                    text: "The Quarry",
+                    next: 'quarry_a01',
+                },
+                {
+                    text: "Xue peak",
+                },
+            ],
+        },
+    ],
+};
+
+const quarry_a01 = {
+    name: 'quarry_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Following the trail of lights, clatter, chattering, and the sound of rubble falling echos across the cave",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Tons of miners are go back and forth, carrying carts, sacks, and equipment along the way",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman still carrying his pickaxe his lured in by the temptation of mining",
+        },
+        {
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Give into temptation?",
+            options: [
+                {
+                    text: "Yes",
+                    next: 'quarry_a02',
+                },
+                {
+                    text: "No",
+                    next: 'quarry_a03',
+                },
+            ],
+        },
+    ],
+};
+
+const quarry_a02 = {
+    name: 'quarry_a02',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman unable to resist the alure of mining, readies his pickaxe and finds the nearist ore vein",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The first haul goes by, then the second, then the third... Stickman is one with the mines...",
+        },
+    ],
 }
+
+const quarry_a03 = {
+    name: 'quarry_a03',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman shakes his head and heads back the way he came",
+            next: 'quarry_a01',
+        },
+    ],
+};
+
+const peak_a01 = {
+    name: 'peak_a01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The air is stagnant, Stickmans and Stickboys breathes freezes, its quiet, its dark, nonetheless, they continue their journey",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman reflections upon his journey, so many people, so little time to understand, Stickboy was the catalyst for the journey but whats the result?",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The lantern lickers brightly, blinding Stickman",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Visions of the ohange licker past Stickman, visions of joy, reject... family",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickboy whos hand was held by Stickman slowly fades as Stickmans visions come to a end",
+        },
+        {
+            types: 'story',
+            speaker: "Narrator",
+            text: "Stickman tries to hold on to Stickboy only to phase through him",
+        },
+    ],
+};
 
 const wrong_a02 = {
     name: 'wrong_a02',
@@ -1633,9 +1890,9 @@ const wrong_a02 = {
             speaker: "Hammer worker",
             text: "\"Not that one, hurry and get the right one next.\"",
             next: 'pride_a03',
-        }
-    ]
-}
+        },
+    ],
+};
 
 const wrong_a01 = {
     name: 'wrong_a01',
@@ -1649,7 +1906,7 @@ const wrong_a01 = {
     ],
 };
 
-const lantern_p02 = {
+const lantern_p02 = { //quest ending//
     name: 'lantern_p02',
     overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
@@ -1665,6 +1922,7 @@ const lantern_p02 = {
             speaker: "Narrator",
             text: "Stickman just glares at him signaling that he was basically homeless in the mountains before going to the guild",
             next: 'quests',
+            questCompleted: 'lantern',
         },
     ]
 };
@@ -1718,4 +1976,4 @@ const in_progress = {
     ]
 }
 
-export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a01, mountains_a02, mountains_p02, quests, guild_a01, guild_a02, guild_a03, lantern_a01, lantern_a02, lantern_a03, lantern_b01, lantern_b02, lantern_b03, lantern_p02, flint_p01, market_a01, bridge_a01, empty_a01, flint_p02, shortcut_a01, straight_a02, rocky_a03, flint_p03, materials_a01, materials_a02, materials_a03, pride_a01, pride_a02, pride_a03, pride_a04, pride_p01, pride_p02, pride_p03, wrong_a01, wrong_a02, grasslands_a01, desert_a01, in_progress];
+export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a01, mountains_a02, mountains_p02, quests, quests_completed, guild_a01, guild_a02, guild_a03, lantern_a01, lantern_a02, lantern_a03, lantern_b01, lantern_b02, lantern_b03, lantern_p02, flint_p01, market_a01, bridge_a01, empty_a01, flint_p02, shortcut_a01, straight_a02, rocky_a03, flint_p03, materials_a01, materials_a02, materials_a03, pride_a01, pride_a02, pride_a03, pride_a04, pride_p01, pride_p02, pride_p03, wrong_a01, wrong_a02, grasslands_a01, desert_a01, in_progress];
