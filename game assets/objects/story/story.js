@@ -25,7 +25,7 @@ const prologue = {
             type: 'story',
             speaker: "Villager 3",
             text: "\"Come here, lemme tell you the story of the figure that we- all the villagers of the figures rising remember.\"",
-            next: 'bridge_a01'
+            next: 'forest_p01'
         },
     ]
 };
@@ -1028,6 +1028,11 @@ const flint_p03 = { //quest end//
             type: 'story',
             speaker: "Narrator",
             text: "Stickman arrives at the final station, shortly after the other hires arrive",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
             text: "Quickly the station workers unload the supplies of dynamite and gunpowder then deliver it to the mines",
         },
         {
@@ -1035,23 +1040,21 @@ const flint_p03 = { //quest end//
             type: 'story',
             speaker: "Mine manager",
             text: "\'Thank you all for you're hard work! When the mines open up, you'll be the first ones to get dibs on entering.\'",
-            next: 'guild_a01',
+            next: 'quests',
         },
     ],
 };
 
 const flint_p04 = {
     name: 'flint_p04',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Mine Manager",
             text: "You're a tad late bud, but still you brought the mats over",
-        },
-        {
-            type: 'story',
-            speaker: "Narrator",
-            text: "",
+            next: 'in_progress',
         },
     ]
 }
@@ -1228,33 +1231,40 @@ const lantern_a03 = {
 
 const lantern_b01 = {
     name: 'lantern_b01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Curosity getting the better him, Stickman explored outwards from the orginal mining site"
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "He came upon a forest, entering it looks untouched, untained, as if it was never near civilization"
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman comes across a boulder, although it looks starngly mushy it is seeping oil",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Still curious about the forest, Stickman strikes the boulder when sudden a geyser of oil sprays all over the forest",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The oil floods the forest, pushing Stickman out the same way he came in",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman wakes up and quickly realizing what happend, ran back to the manager",
@@ -1264,28 +1274,34 @@ const lantern_b01 = {
 
 const lantern_b02 = {
     name: 'lantern_b02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman rushes over to the manager still dreanched in oil",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Stickman",
             text: "\"*out of breath* Manager! *wheezing* I just found the biggest spot of oil\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Manager",
             text: "\"What? You may be new, but I've got a handful of people who lie to me on a daily\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Stickman",
             text: "\" *astima voice* just follow me\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The manager rolled his eye followed Stickman",
@@ -1296,33 +1312,40 @@ const lantern_b02 = {
 
 const lantern_b03 = { //quest end (same ending for oil)//
     name: 'lantern_b03',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Arriving at the border between the oil field and the forest, a lake of oil engulfed the area, the manager wiped his eyes before looking again"
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Manager",
             text: "\"Oh my days... LOOK AT ALL OF THIS OIL, WE'LL NEVER RUN OUT FOR MONTHS\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The manager grabbed Stickmans hand and shooked it continuing to say.",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Manager",
             text: "\"You're the great hire we've gotten this past year, for this I gotta pay you double, no triple the original amount!\""
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman was stunned but greatfully took the offer, but gave it to Stickboy instead because it was heavy and Stickboy needed to pickup his weight",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman waved bye to the manager as he walked back to the guild with Stickboy slowly trailing behind him",
@@ -1334,38 +1357,46 @@ const lantern_b03 = { //quest end (same ending for oil)//
 
 const guild_a03 = {
     name: 'guild_a03',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman arrives at the great furnace, the heat is intense, the sound of metal clanging fills the air, and the look on the workers... razor sharp and focused, intimidating Stickman",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Master Blacksmith",
             text: "\"Aye lad, stop standing there yer gonna get burned\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The man was big, intimidating, and looked like he could crush Stickman if he wanted to, but Stickman although timid, handed in the flyer to help the smith",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Master Blacksmith",
             text: "\"Ahh, so someone actually took our request aye? Well, works for me.\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Masther Blacksmith",
             text: "\"Listen hear, yer job is simple and very risk free, all ya gotta do is hand us the materials, but make sures its correct, the materials are that way, have a look before you start yer shift.\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman nods, the task was simple, tendious but still a easy job nontheless. Besides the Master Blacksmith looked intimidating but he was kind and direct Stickman thought to himself",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman walked over to the many creates scattered around the workshop, the crates were filled with different materials, some were labeled while others weren't, this annoyed Stickman but he new what most of the materials were from his time in the forest.",
@@ -1376,13 +1407,16 @@ const guild_a03 = {
 
 const materials_a01 = {
     name: 'materials_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "There three materials Iron: medium :raw , Coal: light :Coarse, Pig Iron: medium :refined, and Obsidian: heavy : raw",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman notes this down before putting on his gloves and googles and starting his shift",
@@ -1393,13 +1427,16 @@ const materials_a01 = {
 
 const materials_a02 = {
     name: 'materials_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "There three materials Iron: medium :raw , Coal: light :Coarse, Pig Iron: medium :refined, and Obsidian: heavy : raw",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman notes this down before putting on his gloves and googles and starting his shift",
@@ -1410,13 +1447,16 @@ const materials_a02 = {
 
 const materials_a03 = {
     name: 'materials_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "There three materials Iron: medium :raw , Coal: light :Coarse, Pig Iron: medium :refined, and Obsidian: heavy : raw",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman notes this down before putting on his gloves and googles and starting his shift",
@@ -1427,13 +1467,16 @@ const materials_a03 = {
 
 const pride_p01 = {
     name: 'pride_p01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman starts off with the smelting station, as soon as he gets there",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Smelter worker",
             text: "\"Oi, hire we need some raw rocks ova here make sures its ta light, shiny one.\"",
@@ -1444,8 +1487,10 @@ const pride_p01 = {
 
 const pride_a01 = {
     name: 'pride_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "Which material will you give the worker?",
@@ -1477,8 +1522,10 @@ const pride_a01 = {
 
 const pride_a02 = {
     name: 'pride_a02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'stoy',
             speaker: "Smelter worker",
             text: "\"Thank, go down the line were the other workers are, they'll tell you what to do next.\"",
@@ -1489,13 +1536,16 @@ const pride_a02 = {
 
 const pride_p02 = {
     name: 'pride_p02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman contineus to the next station, the workers are casting and hammering metals",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Hammer worker",
             text: "\"Hire get over here quickly, the buckets a bit dry on minerals, get me some of the fine stuff.\"",
@@ -1506,8 +1556,10 @@ const pride_p02 = {
 
 const pride_a03 = {
     name: 'pride_a03',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "Which material will you give the worker?",
@@ -1540,8 +1592,10 @@ const pride_a03 = {
 
 const pride_a04 = {
     name: 'pride_a04',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Hammer Worker",
             text: "\"Great work, move on over, the forge sounds like its in a warzone.\"",
@@ -1552,6 +1606,7 @@ const pride_a04 = {
 
 const pride_p03 = {
     name: 'pride_p03',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
             type: 'story',
@@ -1559,31 +1614,37 @@ const pride_p03 = {
             text: "Quickly arriving at the forge, it is loud, choatic, and the workers, as the worker said before, its a complete warzone",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The smiths are panicking, every thing they strike shatters to pieces, they yelling \"WE WON'T MAKE THE DEADLINE\" repeatedly, the manager is trying to calm them down but his voice is drowned out by the noise of the smiths and hammers striking",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The manager notices Stickman and rushes over to him, \"Hire! Sorry but can you get the obsidian, everything is in melt down without.\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman taken aback that the manager gave him the actual name on the meterial quickly snapped into action, rushing to the creates with obsidian but struggles to move it.",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Checking inside the create, Stickman find that the obsidian was a giant block. making it impossible to lift over to the workers",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman saw a pickaxe nearby but the sounds of frenized smiths echoed through the furnace",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "What will you do?",
@@ -1603,18 +1664,22 @@ const pride_p03 = {
 
 const pride_b01 = {
     name: 'pride_b01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman grabbed the pickaxe, as wrung at the black rock",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "*tink* *tink* Strike after strike Stickman relentlessly bombards the obsidian, eventuallty he breaks it down into carryable chucks.",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Although tired for mining the obsidian, Stickman rushes the obsidian back to the forge",
@@ -1624,22 +1689,36 @@ const pride_b01 = {
 
 const pride_b02 = { //quest ending//
     name: 'pride_b02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Manager",
             text: "\"You're here, quickly take in to the smiths.\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman brings the smiths, in the blink of a eye, all of the obsidian he was carrying disappeared",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Manager",
             text: "\"Good work out there Stickman, its sad that you're here for today only but you keep the workshop going on.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Manager",    
             text: "\"Go get some rest, I'll invite you to the next work party.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Manager",
             text: "\"oh and take this pickaxe as a little token from us\"",
             next: 'quests',
             questCompleted: 'mining',
@@ -1649,50 +1728,70 @@ const pride_b02 = { //quest ending//
 
 const cave_p01 = {
     name: 'cave_p01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Guild receptionist",
             text: "\"You've already done all of the quest? Great, the grand reopening of the minings will be happening the next day\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: 'Guild receptionist',
             text: "\"Go ahead and take a rest in the room upstairs\""
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "A large crowd erupted in the streets, Stickman annoyed, checked outsided the windows to see a crowd of townfolk going to the mines",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman hurries out of bed and exits the guild, its hard to walk around the city, Stickman held on to Stickboys hand while traveling through the crowd"
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "After a bit of crowd surfing the duo find themselves at the front of the parade.",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: 'Narrator',
             text: "Theres a empty stage with a pedal, shortly after the mayor arrives taking the stand",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Mayor",
             text: "\"Good morning everyone, today is a very momentous occasion and its all thanks to a roamer named Stickman, he has dealt with the biggest resource blockages and has allowed us to continue operating the mines as we once have!\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The Crowd cheered Stickmans name as a explosion erpouts behind the mayor, the mine entrence is revealed as the dust settles",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman hides in a ally waiting for the crowd to disperse",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "While waiting Stickman looks at Stickboy and thinks to himself, after the journey hes been through, is it still worth it to continue?",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "Will continue?",
@@ -1712,8 +1811,10 @@ const cave_p01 = {
 
 const cave_a01 = {
     name: 'cave_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman decides hes to far to give up now, making his way to the cave, taking a lantern before entering",
@@ -1725,21 +1826,25 @@ const cave_b01 = {
     name: 'cave_b01',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman felt like he was doing something good for once but couldn't shake off the doubt that has cloud him his entire life."
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman looks at Stickboy",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Stickman",
             text: "\"I'm sorry but I can't keep going.\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman pats Stickboys head before leaving to his forest",
@@ -1749,23 +1854,28 @@ const cave_b01 = {
 
 const cave_p02 = {
     name: 'cave_p02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Using the fruits of his labor, Stickman lit the lantern then followed a rope leading from the enternce into the darkness",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman came across a split road with a sign pointing in two directs, The \"Quarry\" and \"Xue peak\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The quarry had a trail of lanterns piercing the darkness, No one went to Xue peak, it was dark and the air was cold and dense"
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "Where do you want to go?",
@@ -1784,23 +1894,28 @@ const cave_p02 = {
 
 const quarry_a01 = {
     name: 'quarry_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Following the trail of lights, clatter, chattering, and the sound of rubble falling echos across the cave",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Tons of miners are go back and forth, carrying carts, sacks, and equipment along the way",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman still carrying his pickaxe his lured in by the temptation of mining",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "Give into temptation?",
@@ -1820,13 +1935,16 @@ const quarry_a01 = {
 
 const quarry_a02 = {
     name: 'quarry_a02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman unable to resist the alure of mining, readies his pickaxe and finds the nearist ore vein",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The first haul goes by, then the second, then the third... Stickman is one with the mines...",
@@ -1836,8 +1954,10 @@ const quarry_a02 = {
 
 const quarry_a03 = {
     name: 'quarry_a03',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman shakes his head and heads back the way he came",
@@ -1848,88 +1968,106 @@ const quarry_a03 = {
 
 const peak_a01 = {
     name: 'peak_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The air is stagnant, Stickmans and Stickboys breathes freezes, its quiet, its dark, nonetheless, they continue their journey",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman reflections upon his journey, so many people, so little time to understand, Stickboy was the catalyst for the journey but whats the result?",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The lantern lickers brightly, blinding Stickman",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Visions of the ohange licker past Stickman, visions of joy, reject... family",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickboy whos hand was held by Stickman slowly fades as Stickmans visions come to a end",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             types: 'story',
             speaker: "Narrator",
             text: "Stickman tries to hold on to Stickboy only to phase through him",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Stickboy",
             text: "\"Sorry, but it was a good run, you're done so much for the people, you are different now, you're not alone.\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickboy vanished before Stickmans eyes, again visions past by Stickman, visions of his journey",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickboy was never truly with Stickman, all the doubt of his reflection fade away as memories of Stickboys fades as well",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman continues through the darkness, suddenly snow caresses his face",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Light peaks through when Stickman turns the corner of the cave, a draft of cold air floods the cave",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Exiting the cave, a white light blinds Stickman",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: "story",
             speaker: "Narrator",
             text: "Winter covered the vally even more than the previous mountains, rivers still flowed, and Stickman notices a pathway leading from the cave",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman takes the path and traverses through the snowy plain, reaching a flat point in the path, Stickman heads to a nearby river",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Looking at his reflection, no more are there voices, no more are there doubts, just Stickman",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Getting up, Stickman wondered if he should continue down the path to find a village but he felt homesick and wanted to go home but then again Stickman was still dirty from when he exited the cave and he didn't want to put up the impression that he was homeless or broke",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "What will you do?",
@@ -1952,33 +2090,40 @@ const peak_a01 = {
 
 const continue_a01 = {
     name: 'continue_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman continued down the path, its empty, no animals, no bugs, no villagers, only frozen tree litter the blanketed forest",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Stickman",
             text: "Stickman talks to himself, \"Its quiet, its uncomfortable now, the life I once had, feels so foreign, life I cherished, feels so lonenly\"",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Still monologing to himself, Stickman comes across wagon tracks",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman stops his monolog and follows the tracks in a hurry",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman see a troubled man trying to push his cart up a hill, deja vu passed over him",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'choices',
             speaker: "Narrator",
             text: "Help the man?",
@@ -1988,87 +2133,388 @@ const continue_a01 = {
                 },
                 {
                     text: "No",
+                    next: 'xue_a01',
                 },
             ],
         },
     ],
 };
 
-const xue_a01 = {
+const xue_a01 = { //This is a ending //
     name: 'xue_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman gives the man the cold shoulder, leaving him and going ahead to find the village and entering it"
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The streets are empty and most of the buildings are snowed in",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "After exploring the village for a while, Stickman leaves through a forest exit to find another place to settle in",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The forest for the most part is empty until Stickman come across a abandoned hut",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Its run down but barely holding and it looks like nobody as been in this part of the forest for a while",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman enters the house to inspect it tracks of people and usable tools or items",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "He finds an axe, a sheer, and some old bedding slightly covered in snow",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "He first takes the bedding and dusts it off before leaving it to hang on a nearby tree",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Next he takes the axe then searches for dead trees before cutting them down and hauling it over to the hut",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "He takes the sheers and carefully cuts off the branches, afterwards he cuts the wood into planks and carefully places it over the holes of the hut",
         },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Months go by as Stickman occupies the hut, nobody knows hes there, nobody explores there",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman has achived true isolation...",
+        }
     ],
 };
 
-const bath_a01 = {
-    name: 'bath_a01',
+const xue_b01 = {
+    name: 'xue_b01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Stickman",
+            text: "\"Hey! Do you need some help?\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Helpless man",
+            text: "\"Ahh! yes, yes, if you would be so kind to help gather my belongings.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman helps the man gather his items and places it in the cart, after that, he inspected the knot holding the items and tightend it so it wouldn't fall off again",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Helpless man",
+            text: "\"Thank you for your assistance, may I ask where you're going?\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Helpless man",
+            text: "\"Its cold out here and most of the buildings are probably snowed in by this point.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Helpless man",
+            text: "\"I just came from the mountains and I felt like I was on a quest - maybe I was on a quest but, I'm here now and I'm kinda lost.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Helpless man",
+            text: "\"You're a travler? That would explain your attire or lack of.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Helpless man",
+            text: "\"Anyways, as payment, I can give you a lift to the village that needs some help.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Stickman",
+            text: "\"That would be great, thank you.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman gets on the back of the mans caravan, joining him of his travels",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Shortly after departing, they find themselves at the gate of the village",
+            next: 'xue_p02',
+        },
+    ]
+};
+
+const xue_p02 = {
+    name: 'xue_p02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
+    data: [
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Entering the village, the two are surprised to see mountains of snow blanketing the entire village",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'choices',
+            speaker: "Narrator",
+            text: "Offer to help the man again?",
+            options: [
+                {
+                    text: "Yes",
+                },
+                {
+                    text: "No",
+                },
+            ]
+        }
+    ]
+}
+
+const xue_a02 = {
+    name: 'xue_a02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
+    data: [
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Stickman",
+            text: "\"This looks like its gonna take you a while to clean.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Stickman",
+            text: "\"Need some help?\"",
+    
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Caravan man",
+            text: "\"You truly are a gift from the heavens!\"",
+        },        
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Caravan man",
+            text: "\"Theres a extra shovel in the back, I'll start with the left side of the village.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman grabs the shovel then walks in the opposite direction from the man",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Walking up to one of the buildings, Stickman hears banging and begins to frantically dig towards the noise",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman shovels a mound of snow and eventually see a slight light, he shovels faster",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "He creates a opening to the builds door where it swings open",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Villager",
+            text: "\"Thank you! oh, you're not the usual guy but still you saved us.\"",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Inside the building, its a family, a large family",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "The entire family grabs tools, even the kids although their tools are plastic",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "The family shovels their neighbor snow",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman stunned for a second, snaps out of it and helps the family",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "The neighbors are free then they get their tools and help the next person, then the next. then the next",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman engrossed by the community can't help feel a sense of belonging",
+        },
+    ]
+};
+
+const xue_p03 = {
+    name: 'xue_p03',
+    data: [
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "The building are cleared of snow and the once dark village became flooded in light",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "The villagers quickly bring tables, pots, coals, and food",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "In the blink of an eye the villagers set up a festival"
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "The smell of fresh food, the sight of villagers dancing in joy, and the feel of being useful strike Stickman",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman felt so out of place, he lived isolated his entire life, he had rejected everyone is enire life",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "While lost in thought, a villager came up to Stickman and offers him food, inviting Stickman to join the party",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman awkwardly joins the party, still out of place but eventually gets into the party spirit",
+        },
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
+            type: 'story',
+            spekaer: "Narrator",
+            text: "Stickman felt like he belonged somewhere and didn't reject it",
+        },
+        {
+            type: 'story',
+            speaker: "Narrator",
+            text: "Stickman decided to live in the village and be part of the community",
+        },
+    ]
+},
+
+const thank_p01 = {
+    name: 'thank_p01',
+    data: [
+        {
+            type: 'story',
+            speaker: "Devs",
+            text: "Thank you for playing our game!",
+        },
+        {
+            type: 'story',
+            speake
+        }
+    ]
+}
+
+const bath_a01 = {
+    name: 'bath_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
+    data: [
+        {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "If Stickman were to go to town, he rather look decent then rancid",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Without hesitation, Stickman dives into the water, regret instantly fills his body",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Moments later. Stickman becomes Sticksicle and slowly drifts down the river",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Years later, a village finds Stickmans frozen body, but thinking its a rare sculpture, they bring it to a frozen museum where Stickman now lies eternally"
@@ -2078,43 +2524,52 @@ const bath_a01 = {
 
 const rebuild_a01 = {
     name: 'rebuild_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman felt like hes done enough on his journey and remembered the comfort of his life before his journey",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "He went to the forest and with his pickaxe, he shattered rocks, collected woods, and kindle",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "He set up a temporary camp ground, made crude tools, and began to rebuild his old life",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Felling tree after tree, Stickman gathers enough logs to make a small cabin",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Weeks later Stickman finishes his cabin, its small, simple but it gets the job done",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Months past by Stickman, hes expanded his cabin and lives in isolation, but rustling in the bushes, curious eyes stares at Stickman inside his cabin",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "Stickman had a feeling of deja vu, walking outside he scans his surroundings",
         },
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Narrator",
             text: "The bushes rustle and out comes a young villager, timidly the boy say",
@@ -2129,8 +2584,10 @@ const rebuild_a01 = {
 
 const wrong_a02 = {
     name: 'wrong_a02',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Hammer worker",
             text: "\"Not that one, hurry and get the right one next.\"",
@@ -2141,8 +2598,10 @@ const wrong_a02 = {
 
 const wrong_a01 = {
     name: 'wrong_a01',
+    overlay_url: '/images/gameZoneOverlay/defaultOverlay.svg',
     data: [
         {
+            bg_url: '/images/gameZoneBG/defaultBG.svg',
             type: 'story',
             speaker: "Smelter worker",
             text: "\"This is the wrong one, hurry get the right one.\"",
@@ -2221,4 +2680,4 @@ const in_progress = {
     ]
 }
 
-export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a01, mountains_a02, mountains_p02, quests, quests_completed, guild_a01, guild_a02, guild_a03, lantern_a01, lantern_a02, lantern_a03, lantern_b01, lantern_b02, lantern_b03, lantern_p02, flint_p01, market_a01, bridge_a01, empty_a01, flint_p02, shortcut_a01, straight_a02, rocky_a03, flint_p03, materials_a01, materials_a02, materials_a03, pride_a01, pride_a02, pride_a03, pride_a04, pride_p01, pride_p02, pride_p03, wrong_a01, wrong_a02, grasslands_a01, desert_a01, in_progress];
+export const completeStory = [prologue, forest_p01, forest_p02, forest_a01, forest_a02, forest_b01, forest_c01, call_p01, refuse_p01, refuse_a01, refuse_b01, mentor_p01, crossing_p01, crossing_a01, crossing_b02, tae_p01, tae_a01, tae_b01, tae_c01, mountains_p01, mountains_a01, mountains_p02, mountains_a02, quests, quests_completed, guild_a01, guild_a02, guild_a03, lantern_a01, lantern_a02, lantern_a03, lantern_b01, lantern_b02, lantern_b03, lantern_p02, flint_p01, market_a01, bridge_a01, empty_a01, flint_p02, shortcut_a01, straight_a02, rocky_a03, flint_p03, flint_p04, materials_a01, materials_a02, materials_a03, pride_a01, pride_a02, pride_a03, pride_a04, pride_p01, pride_p02, pride_p03, pride_b01, pride_b02, cave_p01, cave_a01, cave_p02, quarry_a01, quarry_a02, quarry_a03, peak_a01, continue_a01, xue_a01, xue_b01, xue_p02, xue_a02, xue_p03, thank_p01, bath_a01, rebuild_a01, tae_a01, cave_b01, wrong_a01, wrong_a02, grasslands_a01, desert_a01, in_progress];

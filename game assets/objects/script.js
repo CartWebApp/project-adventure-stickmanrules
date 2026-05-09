@@ -57,7 +57,7 @@ function showOptions(btnNum) {
 let questsCompletedSet = []
 
 function canLeaveTown() {
-    return questsCompletedSet.length >= 3
+    return questsCompletedSet.length >= 1
 }
 
 function logQuestCompletion(questName) {
@@ -69,15 +69,18 @@ function logQuestCompletion(questName) {
 
 // Delivery quest speed
 let speedBuff = 0;
+let speedBuffArr = [];
 
 function finalSpeedChecker() {
-    
+    return speedBuffArr.length >= 2
 }
 
 function checkForSpeed(buffValue) {
     if (buffValue) {
+        speedBuffArr.push(buffValue);
         speedBuff = speedBuff + Number(buffValue);
-        console.log('New speed?')
+        console.log(speedBuffArr)
+        console.log(speedBuff)
     }
 }
 
@@ -96,6 +99,9 @@ function updateStory() {
         
         updateStory();
     }
+
+    
+
 
     if (dialogueNum == (storyPart.length - 1) && storyPart[dialogueNum].type == 'choices') {
         // Toggles Choices to view
@@ -127,6 +133,8 @@ function updateStory() {
         return
     }
 
+    
+
     if (dialogueNum > (storyPart.length - 1)) {
         let nextScene = storyPart[dialogueNum - 1].next;
         let storyIndex = completeStory.findIndex(n => n.name === nextScene);
@@ -145,8 +153,34 @@ function updateStory() {
     updateGZOverlay();
     updateGZBG();
 
+        checkForSpeed(storyPart[dialogueNum].buffValue);
+
+    if (finalSpeedChecker()) {
+        console.log(speedBuff)
+        if (speedBuff >= 3) {
+        speedBuff = 0;
+        speedBuffArr = [];
+        let storyIndex = completeStory.findIndex(n => n.name === 'flint_p03');
+        storyPartNum = storyIndex;
+        dialogueNum = 0;
+        storyPart = completeStory[storyPartNum].data;
+        updateStory()
+
+        } else {
+        speedBuff = 0
+        speedBuffArr = [];
+        let storyIndex = completeStory.findIndex(n => n.name === 'flint_p04');
+        storyPartNum = storyIndex;
+        dialogueNum = 0;
+        storyPart = completeStory[storyPartNum].data;
+        updateStory()
+
+        }
+    }
+
+
+
     logQuestCompletion(storyPart[dialogueNum].questCompleted);
-    checkForSpeed(storyPart[dialogueNum].buffValue);
 
     dialogueNum++;
 }
