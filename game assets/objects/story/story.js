@@ -2483,10 +2483,6 @@ const thank_p01 = {
             type: 'story',
             speaker: "Devs",
             text: "Thank you for playing our game!",
-        },
-        {
-            type: 'story',
-            speake
         }
     ]
 }
