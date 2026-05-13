@@ -2474,7 +2474,7 @@ const xue_p03 = {
             text: "Stickman decided to live in the village and be part of the community",
         },
     ]
-},
+}
 
 const thank_p01 = {
     name: 'thank_p01',
